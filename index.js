@@ -3,12 +3,22 @@ const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
+const mongoose = require('mongoose')
 
 dotenv.config()
 
 
-//database
+//database []
 const db_users=[]
+
+//mongodb database connection
+const connect = async ()=>{
+   mongoose.connect('uri')
+   .then( ()=> console.log("db connected"))
+   .then( ()=> console.log("db connected"))
+   .catch( )
+}
+
 
 const PORT = process.env.PORT
 const app = express()
